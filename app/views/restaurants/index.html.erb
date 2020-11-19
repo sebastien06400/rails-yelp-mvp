@@ -1,0 +1,16 @@
+OK JE SUIS DANS L'ACTION INDEX
+
+<% @restaurants.each do |r| %>
+<li>
+<%= r.name %> 
+<%# <button>edit</button>  %>
+<%= link_to "edit", restaurant_path(r.id), :method => :get %>
+<%# <%= button_to "edit", restaurant_path %>
+</li>
+
+
+<% end %>
+
+<button>
+<%= link_to "add", new_restaurant_path %>
+</button>
